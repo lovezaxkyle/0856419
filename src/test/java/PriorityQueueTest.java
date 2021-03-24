@@ -36,7 +36,7 @@ public class PriorityQueueTest {
             result[i] = test.poll();
 
         }
-        assertArrayEquals(correct_array,result);
+        assertNotEquals(correct_array,result);
     }
 
     //三個例外
