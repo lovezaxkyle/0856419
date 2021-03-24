@@ -13,7 +13,7 @@ public class PriorityQueueTest {
     static Stream<Arguments> stringIntAndListProvider(){
         //  return stream
         return Stream.of(
-                arguments(new int[]{3,8,6,4},new int[] {3,4,6,8}),
+                arguments(new int[]{3,8,6,4},new int[] {3,6,4,8}),
                 arguments(new int[]{2,5,3,1},new int[] {1,2,3,5}),
                 arguments(new int[]{7,4,6,5},new int[] {4,5,6,7}),
                 arguments(new int[]{8,0,3,6},new int[] {0,3,6,8}),
@@ -36,7 +36,7 @@ public class PriorityQueueTest {
             result[i] = test.poll();
 
         }
-        InitialCapacityTest(correct_array,result);
+        assertArrayEquals(correct_array,result);
     }
 
     //三個例外
