@@ -22,7 +22,7 @@ public class PriorityQueueTest {
     }
 
     @ParameterizedTest(name="#{index} -Test with Argument={0},{1}")
-    @MethodSource("stringIntAndListProvider")
+    @MethodSource("InitialCapacityTest")
     public void PriorityQueue_RunTest(int [] random_array,int[] correct_array){
         PriorityQueue<Integer> test = new PriorityQueue<Integer>();
         int index = 0;
@@ -36,7 +36,7 @@ public class PriorityQueueTest {
             result[i] = test.poll();
 
         }
-        assertNotEquals(correct_array,result);
+        assertArrayEquals(correct_array,result);
     }
 
     //三個例外
